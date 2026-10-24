@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mosiria Evidence Trail</title>
+<meta name="description" content="A sourced documentary outline and trail of evidence on Geoffrey Mosiria's fallouts with Sakaja, Babu Owino and Oga Obinna, and where Jalang'o fits.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f3ee; --surface:#fffdf9; --ink:#1b1a17; --muted:#5f5a52; --line:#e2dcd2;
+  --accent:#b4441c; --accent-soft:#f5e3d9;
+  --t-primary:#1f6f4a; --t-primary-bg:#e1f1e8;
+  --t-main:#245b9c; --t-main-bg:#e2ebf7;
+  --t-ent:#8a5a00; --t-ent-bg:#f7ecd4;
+  --t-claim:#a3212b; --t-claim-bg:#f8e1e3;
+  --shadow:0 1px 2px rgba(0,0,0,.05),0 4px 16px rgba(0,0,0,.05);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141311; --surface:#1d1b18; --ink:#efeae2; --muted:#a59e92; --line:#34302a;
+  --accent:#f0875a; --accent-soft:#3a2418;
+  --t-primary:#6fd3a0; --t-primary-bg:#173326;
+  --t-main:#8db8f0; --t-main-bg:#172638;
+  --t-ent:#e7bd62; --t-ent-bg:#33270f;
+  --t-claim:#f28b93; --t-claim-bg:#3a1a1d;
+  --shadow:none;
+}}
+:root[data-theme="dark"]{
+  --bg:#141311; --surface:#1d1b18; --ink:#efeae2; --muted:#a59e92; --line:#34302a;
+  --accent:#f0875a; --accent-soft:#3a2418;
+  --t-primary:#6fd3a0; --t-primary-bg:#173326;
+  --t-main:#8db8f0; --t-main-bg:#172638;
+  --t-ent:#e7bd62; --t-ent-bg:#33270f;
+  --t-claim:#f28b93; --t-claim-bg:#3a1a1d;
+  --shadow:none;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header.hero{padding:56px 0 28px;border-bottom:1px solid var(--line)}
+.kicker{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600}
+h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(34px,6vw,60px);line-height:1.05;margin:10px 0 14px}
+h2{font-family:Fraunces,Georgia,serif;font-size:clamp(26px,4vw,36px);margin:0 0 6px;line-height:1.15}
+h3{font-size:19px;margin:0 0 4px;line-height:1.3}
+.lede{font-size:18px;color:var(--muted);max-width:760px;margin:0}
+nav.toc{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav.toc .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+nav.toc a{white-space:nowrap;text-decoration:none;color:var(--ink);font-size:14px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface)}
+nav.toc a:hover{border-color:var(--accent)}
+section{padding:44px 0;border-bottom:1px solid var(--line)}
+.sub{color:var(--muted);margin:0 0 22px;max-width:760px}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.tag.primary{color:var(--t-primary);background:var(--t-primary-bg)}
+.tag.main{color:var(--t-main);background:var(--t-main-bg)}
+.tag.ent{color:var(--t-ent);background:var(--t-ent-bg)}
+.tag.claim{color:var(--t-claim);background:var(--t-claim-bg)}
+.note{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);padding:14px 16px;border-radius:8px;margin:22px 0 0;font-size:15px;box-shadow:var(--shadow)}
+.note b{color:var(--ink)}
+/* cast */
+.cast{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.person{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;box-shadow:var(--shadow)}
+.person .role{font-size:13px;color:var(--muted)}
+.person .rel{font-size:14px;margin-top:8px}
+.map{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-top:18px;padding:8px;box-shadow:var(--shadow)}
+.map svg{width:100%;height:auto;display:block}
+.map text{fill:var(--ink);font-family:Inter,sans-serif}
+.map .lbl{font-size:12px;fill:var(--muted)}
+/* acts */
+.act-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.act-num{font-family:Fraunces,serif;font-size:15px;color:var(--accent);font-weight:800;letter-spacing:.05em}
+.scene{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;margin:16px 0;box-shadow:var(--shadow)}
+.scene-top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:flex-start;margin-bottom:10px}
+.date{font-size:13px;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+.scene-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:18px}
+@media (max-width:760px){.scene-grid{grid-template-columns:1fr}}
+.vid{position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#000;cursor:pointer}
+.vid img{width:100%;height:100%;object-fit:cover;opacity:.85;transition:opacity .2s}
+.vid:hover img{opacity:1}
+.vid .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.vid .play span{background:rgba(0,0,0,.72);color:#fff;font-weight:600;font-size:14px;padding:10px 16px;border-radius:999px}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vmeta{font-size:13px;color:var(--muted);margin-top:8px}
+.vmeta a{font-weight:600}
+.quote{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:0 0 12px}
+.quote p{margin:0;font-family:Fraunces,Georgia,serif;font-size:17px;line-height:1.45}
+.quote .orig{font-family:Inter,sans-serif;font-size:13px;color:var(--muted);font-style:italic;margin-top:4px}
+.ts{display:inline-block;font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;background:var(--accent-soft);color:var(--accent);padding:1px 7px;border-radius:5px;margin-bottom:4px;text-decoration:none;border:0;cursor:pointer;font-family:Inter,sans-serif}
+.ctx{font-size:15px;margin:10px 0 0}
+.srcs{margin:12px 0 0;padding:0;list-style:none;font-size:14px}
+.srcs li{margin:4px 0;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.check{margin-top:12px;font-size:14px;padding:10px 12px;border-radius:8px;background:var(--t-claim-bg);color:var(--ink)}
+.check b{color:var(--t-claim)}
+/* tables */
+.tbl{width:100%;border-collapse:collapse;font-size:14px;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.tbl th,.tbl td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:var(--bg)}
+.tbl tr:last-child td{border-bottom:0}
+.scroll{overflow-x:auto}
+.verdict{font-weight:700;white-space:nowrap}
+.verdict.no{color:var(--t-claim)} .verdict.part{color:var(--t-ent)} .verdict.yes{color:var(--t-primary)}
+.tl{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 18px 20px}
+.tl li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--accent)}
+.tl .d{font-size:13px;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+.srclist{columns:2 320px;column-gap:28px;font-size:14px;padding-left:18px}
+.srclist li{break-inside:avoid;margin:0 0 6px}
+.gaps li{margin:6px 0}
+footer{padding:32px 0 60px;color:var(--muted);font-size:14px}
+.theme-btn{position:fixed;right:14px;bottom:14px;z-index:9;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 12px;font:600 13px Inter,sans-serif;cursor:pointer;box-shadow:var(--shadow)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Nairobi politics · documentary research file · compiled 24 Oct 2026</div>
+    <h1>Mosiria vs. Everyone</h1>
+    <p class="lede">Over three years Geoffrey Mosiria went from Governor Sakaja's most-praised chief officer to a fired rival running for his seat. Along the way he fell out with Babu Owino and Oga Obinna. This file traces each relationship through what the people involved said on camera and what the press reported, and keeps each man's claims separate from established fact.</p>
+    <div class="legend" aria-label="Evidence grades">
+      <span class="tag primary">On-camera primary</span>
+      <span class="tag main">Mainstream media</span>
+      <span class="tag ent">Entertainment / digital</span>
+      <span class="tag claim">Allegation, unverified</span>
+    </div>
+    <div class="note"><b>How to read this.</b> Each clip is a real YouTube video, checked on 24 Oct 2026 for channel, upload date and that it plays. Timestamps jump to the quoted moment. Quotes come from YouTube's <i>auto-generated</i> captions, lightly cleaned. Swahili passages were translated by Claude, and the original is shown beneath. Before you use any quote on air, watch the clip and confirm it. The raw captions are in <a href="transcripts/">/transcripts</a>. Words like "bribe", "rigged" or "informer" are <b>claims made by one person about another</b> and are labelled as such.</div>
+  </div>
+</header>
+
+<nav class="toc"><div class="wrap">
+  <a href="#cast">Cast &amp; map</a>
+  <a href="#act1">I · Origins</a>
+  <a href="#act2">II · Cracks</a>
+  <a href="#act3">III · The Obinna front</a>
+  <a href="#act4">IV · Declaration &amp; firing</a>
+  <a href="#act5">V · Aftermath</a>
+  <a href="#claims">Claims vs evidence</a>
+  <a href="#timeline">Timeline</a>
+  <a href="#sources">Sources</a>
+  <a href="#gaps">Gaps</a>
+</div></nav>
+
+<main>
+<section id="cast"><div class="wrap">
+  <h2>The cast</h2>
+  <p class="sub">"Mosiria vs friends" is mostly right. The exception is Jalang'o: we found no direct fight with Mosiria after 2025. His part in the story is as Babu's public backer.</p>
+  <div class="cast">
+    <div class="person"><h3>Geoffrey Mosiria</h3><div class="role">Nairobi chief officer 2022 to Oct 2026 (Health, then Environment, then Public Participation); 2027 governor hopeful</div><div class="rel">Centre of the story. Built his profile on TikTok enforcement videos.</div></div>
+    <div class="person"><h3>Johnson Sakaja</h3><div class="role">Governor of Nairobi</div><div class="rel">Appointed Mosiria, praised him, then removed him on 21 Oct 2026. Has said nothing on record.</div></div>
+    <div class="person"><h3>Babu Owino</h3><div class="role">MP, Embakasi East; 2027 governor hopeful</div><div class="rel">Rival since University of Nairobi student politics. Mutual insults; Mosiria accuses him of taking a bribe, which Babu denies.</div></div>
+    <div class="person"><h3>Oga Obinna</h3><div class="role">Comedian, YouTuber, talk-show host (Steve Thompson Magana)</div><div class="rel">Feud since Feb 2026. Rival defamation demands of KSh10M and KSh20M.</div></div>
+    <div class="person"><h3>Jalang'o</h3><div class="role">MP, Lang'ata (Phelix Odiwuor)</div><div class="rel">Close to Babu. Says Babu "will be governor". Mosiria clashed with him once, in Apr 2025.</div></div>
+  </div>
+
+  <div class="map" role="img" aria-label="Relationship map: Mosiria in the centre with hostile links to Sakaja, Babu Owino and Obinna, and a 2025 clash with Jalang'o; Jalang'o backs Babu; Mosiria alleges Babu and Sakaja are allied, which Babu denies.">
+    <svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker>
+      </defs>
+      <!-- links -->
+      <line x1="450" y1="200" x2="170" y2="80" stroke="var(--t-claim)" stroke-width="3"/>
+      <line x1="450" y1="200" x2="730" y2="80" stroke="var(--t-claim)" stroke-width="3"/>
+      <line x1="450" y1="200" x2="170" y2="330" stroke="var(--t-claim)" stroke-width="3"/>
+      <line x1="450" y1="200" x2="730" y2="330" stroke="var(--t-ent)" stroke-width="2" stroke-dasharray="6 5"/>
+      <line x1="730" y1="330" x2="730" y2="105" stroke="var(--t-primary)" stroke-width="3" marker-end="url(#ah)"/>
+      <line x1="195" y1="80" x2="705" y2="80" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="3 5"/>
+      <!-- labels on links -->
+      <text class="lbl" x="250" y="125">boss → fired him (21 Oct 2026)</text>
+      <text class="lbl" x="560" y="125">campus rivals since SONU</text>
+      <text class="lbl" x="215" y="288">KSh10M vs KSh20M demands</text>
+      <text class="lbl" x="560" y="288">"witches" row, Apr 2025</text>
+      <text class="lbl" x="742" y="215">endorses for</text>
+      <text class="lbl" x="742" y="231">governor</text>
+      <text class="lbl" x="330" y="70">Mosiria claims they're allied (Babu denies)</text>
+      <!-- nodes -->
+      <g><circle cx="450" cy="200" r="46" fill="var(--accent)"/><text x="450" y="196" text-anchor="middle" font-weight="700" font-size="15" style="fill:#fff">Mosiria</text><text x="450" y="214" text-anchor="middle" font-size="11" style="fill:#fff">ex-chief officer</text></g>
+      <g><circle cx="170" cy="80" r="34" fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/><text x="170" y="85" text-anchor="middle" font-weight="700" font-size="14">Sakaja</text></g>
+      <g><circle cx="730" cy="80" r="34" fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/><text x="730" y="85" text-anchor="middle" font-weight="700" font-size="14">Babu</text></g>
+      <g><circle cx="170" cy="330" r="34" fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/><text x="170" y="335" text-anchor="middle" font-weight="700" font-size="14">Obinna</text></g>
+      <g><circle cx="730" cy="330" r="34" fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/><text x="730" y="335" text-anchor="middle" font-weight="700" font-size="14">Jalang'o</text></g>
+      <!-- key -->
+      <g transform="translate(330,360)" font-size="12">
+        <line x1="0" y1="0" x2="26" y2="0" stroke="var(--t-claim)" stroke-width="3"/><text class="lbl" x="32" y="4">open feud</text>
+        <line x1="110" y1="0" x2="136" y2="0" stroke="var(--t-ent)" stroke-width="2" stroke-dasharray="6 5"/><text class="lbl" x="142" y="4">one-off clash</text>
+        <line x1="240" y1="0" x2="266" y2="0" stroke="var(--t-primary)" stroke-width="3"/><text class="lbl" x="272" y="4">alliance</text>
+      </g>
+    </svg>
+  </div>
+</div></section>
+
+<div id="acts"></div>
+
+<section id="claims"><div class="wrap">
+  <h2>Claims vs evidence</h2>
+  <p class="sub">The documentary's fact-check layer. "Unsupported" means only the person making the claim has said it. It does not mean the claim is false.</p>
+  <div class="scroll"><table class="tbl">
+    <thead><tr><th>Claim</th><th>Who says it</th><th>What the record shows</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Babu took KSh20M (after asking for KSh50M) plus KSh1M a week to stop attacking Sakaja, and is now "negotiating" KSh2.5B to step aside</td><td>Mosiria, <a href="https://youtu.be/62DVyFxwS4E?t=3263">Iko Nini 764 @54:23</a>; also <a href="https://youtu.be/51oqihFSC0E?t=2260">Volcano @37:40</a></td><td>Babu denies it and calls Mosiria a "lunatic" (<a href="https://www.tnx.africa/newsbeat/article/2001560638/babu-owino-dismisses-mosirias-sh20-million-claim-after-sakaja-fires-aide">TNX</a>). No documents produced. Against the "he went silent" part: Babu accused Sakaja of stealing funds in <a href="https://youtu.be/sB5mNQ8LmMo">Mar 2026 (The Star)</a> and compared him to the Bible's "third servant" in <a href="https://peopledaily.digital/inside-politics/babu-owino-sakaja-is-like-bibles-third-servant-who-wasted-his-masters-wealth">Oct 2026 (People Daily)</a>.</td><td class="verdict no">Unsupported</td></tr>
+      <tr><td>Sakaja effectively sacked Mosiria in Dec 2023 and cut his health budget from KSh1.2B to KSh100M after he refused to approve direct procurement</td><td>Mosiria (<a href="https://citizen.digital/article/budget-cuts-internal-frustrations-mosiria-fires-back-at-sakaja-after-sacking-n392462">Citizen</a>, <a href="https://youtu.be/5IJVpqolkFY?t=174">KTN</a>)</td><td>NTV: "has not independently verified the allegations"; the governor's communications team "declined to respond" (<a href="https://youtu.be/3wdLiiLADAU?t=169">NTV @2:49</a>). Mosiria gives two dates for the meeting, 23 Dec and 28 Dec 2023 (<a href="https://youtu.be/51oqihFSC0E?t=714">Volcano @11:54</a> and <a href="https://youtu.be/51oqihFSC0E?t=1452">@24:12</a>). Budget records could be checked.</td><td class="verdict part">Unverified, checkable</td></tr>
+      <tr><td>Babu won the SONU election through rigging and asked Mosiria to stay out of Embakasi East</td><td>Mosiria (<a href="https://youtu.be/2kTUZZegUjU?t=9">NTV, Mar 2025</a>)</td><td>Only Mosiria's account. We found no reply from Babu on this point.</td><td class="verdict no">Mosiria only</td></tr>
+      <tr><td>Babu shot a DJ</td><td>Mosiria (<a href="https://youtu.be/gzqPzlXAzRI?t=1923">SPM Buzz @32:03</a>)</td><td>This refers to the Jan 2020 DJ Evolve shooting. The attempted-murder charge was withdrawn after a settlement in Dec 2021, and Babu was <b>acquitted</b> on the firearm count in Aug 2023 for lack of evidence (<a href="https://www.kenyans.co.ke/news/92490-babu-owino-acquitted">Kenyans.co.ke</a>, <a href="https://nairobilawmonthly.com/why-court-acquitted-mp-babu-owino-acquitted-in-dj-evolve-shooting/">Nairobi Law Monthly</a>). Any use of this needs that context.</td><td class="verdict no">Court acquitted</td></tr>
+      <tr><td>Babu was a "government informer" at UoN and is a "state project"</td><td>Mosiria, own channel (<a href="https://youtu.be/i_Vo6mKuMJ4?t=2211">@36:51</a>)</td><td>No supporting evidence found.</td><td class="verdict no">Unsupported</td></tr>
+      <tr><td>The Mbavu Destroyer vs Majembe boxing match was scripted</td><td>Mosiria</td><td>Obinna rejects it. The Star: "no independent confirmation" (<a href="https://www.the-star.co.ke/news/2026-04-06-obinna-mosiria-clash-over-alleged-scripted-boxing-match-claims">The Star</a>).</td><td class="verdict no">Unsupported</td></tr>
+      <tr><td>Obinna is suing Mosiria for KSh10M; Mosiria counter-demands KSh20M</td><td>Both sides' lawyers</td><td>Demand letters dated around 17 and 28 Sep 2026 have been reported (<a href="https://nairobinews.co.ke/oga-obinna-demands-sh10-million-from-geoffrey-mosiria-over-alleged-defamatory-claims/">Nairobi News</a>, <a href="https://sauce.co.ke/2026/09/geoffrey-mosiria-hits-back-at-oga-obinna-with-ksh20-million-defamation-demand/">Sauce</a>). We found no reported court filing.</td><td class="verdict part">Demand letters only</td></tr>
+      <tr><td>Sakaja called Mosiria "one of the most hardworking chief officers in Kenya"</td><td>Sakaja</td><td>On camera (<a href="https://youtu.be/SVxnAOHl47E">video uploaded 17 Jun 2024</a>).</td><td class="verdict yes">Confirmed</td></tr>
+      <tr><td>Mosiria was removed on 21 Oct 2026, days after declaring for governor</td><td>County memo</td><td>Memo from County Secretary Machel Waikenda; Zipporah Njeri Mwangi named acting chief officer (<a href="https://youtu.be/5IJVpqolkFY?t=19">KTN</a>, <a href="https://citizen.digital/article/nairobi-governor-sakaja-fires-chief-officer-geoffrey-mosiria-in-latest-reshuffle-n392457">Citizen</a>, <a href="https://nation.africa/kenya/counties/nairobi/nairobi-governor-sakaja-fires-chief-officer-geoffrey-mosiria-in-latest-city-hall-changes-5640626">Nation</a>). The memo gives no reason.</td><td class="verdict yes">Confirmed</td></tr>
+      <tr><td>Jalang'o backs Babu for governor</td><td>Jalang'o</td><td>Said in an interview with Alex Mwakideu on his own channel, Jul 2025 (<a href="https://citizen.digital/article/babu-owino-will-win-nairobi-governor-race-with-or-without-odm-ticket-jalango-says-n366620">Citizen</a>, <a href="https://www.the-star.co.ke/news/2025-07-18-babu-owino-will-be-nairobi-governor-in-2027-jalango">The Star</a>). We found nothing newer.</td><td class="verdict yes">Confirmed (2025)</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="timeline"><div class="wrap">
+  <h2>Master timeline</h2>
+  <p class="sub">Dates are as reported. Where outlets disagree, the earliest well-sourced date is used.</p>
+  <ul class="tl" id="tl"></ul>
+</div></section>
+
+<section id="sources"><div class="wrap">
+  <h2>Source register</h2>
+  <p class="sub">Every source cited on this page. Videos were checked for channel, date and that they play. We read the Star, Citizen and K24 articles in full. Nation, TNX and Mpasho blocked our reader, so their details come from search excerpts and you should open them yourself.</p>
+  <h3 style="margin-top:8px">Video (YouTube)</h3>
+  <ol class="srclist" id="vidsrc"></ol>
+  <h3 style="margin-top:18px">Print &amp; web</h3>
+  <ol class="srclist">
+    <li><span class="tag main">Mainstream</span> <a href="https://citizen.digital/article/budget-cuts-internal-frustrations-mosiria-fires-back-at-sakaja-after-sacking-n392462">Citizen Digital: "Budget cuts, internal frustrations": Mosiria fires back (21 Oct 2026)</a></li>
+    <li><span class="tag main">Mainstream</span> <a href="https://citizen.digital/article/nairobi-governor-sakaja-fires-chief-officer-geoffrey-mosiria-in-latest-reshuffle-n392457">Citizen Digital: Sakaja fires Mosiria in latest reshuffle</a></li>
+    <li><span class="tag main">Mainstream</span> <a href="https://nation.africa/kenya/counties/nairobi/nairobi-governor-sakaja-fires-chief-officer-geoffrey-mosiria-in-latest-city-hall-changes-5640626">Nation: Sakaja fires Chief Officer Geoffrey Mosiria</a></li>
+    <li><span class="tag main">Mainstream</span> <a href="https://nation.africa/kenya/counties/nairobi/mosiria-how-my-fallout-with-governor-sakaja-started-5642010">Nation: Mosiria: How my fallout with Governor Sakaja started</a></li>
+    <li><span class="tag main">Mainstream</span> <a href="https://capitalfm.africa/sakaja-sacks-mosiria-days-after-governor-bid/">Capital FM: Sakaja sacks Mosiria days after Governor bid</a></li>
+    <li><span class="tag main">Mainstream</span> <a href="https://www.standardmedia.co.ke/nairobi/article/2001559721/chief-officer-mosiria-eyes-sakajas-seat-after-fallout">The Standard: Mosiria eyes Sakaja's seat after fallout</a></li>
+    <li><span class="tag main">Mainstream</span> <a href="https://www.the-star.co.ke/news/2026-10-22-the-mosiria-phenomenon-how-social-media-built-his-profile">The Star: The Mosiria phenomenon (22 Oct 2026)</a></li>
+    <li><span class="tag main">Mainstream</span> <a href="https://www.the-star.co.ke/news/2026-04-06-obinna-mosiria-clash-over-alleged-scripted-boxing-match-claims">The Star: Obinna, Mosiria clash over scripted boxing claims (6 Apr 2026)</a></li>
+    <li><span class="tag main">Mainstream</span> <a href="https://www.the-star.co.ke/news/2025-07-18-babu-owino-will-be-nairobi-governor-in-2027-jalango">The Star: Babu Owino will be Nairobi Governor in 2027 – Jalang'o</a></li>
+    <li><span class="tag main">Mainstream</span> <a href="https://www.the-star.co.ke/news/2026-10-22-babu-dismisses-reports-of-senate-switch">The Star: Babu dismisses Senate switch reports (22 Oct 2026)</a></li>
+    <li><span class="tag main">Mainstream</span> <a href="https://citizen.digital/article/babu-owino-will-win-nairobi-governor-race-with-or-without-odm-ticket-jalango-says-n366620">Citizen Digital: Jalang'o on Babu "with or without ODM ticket" (19 Jul 2025)</a></li>
+    <li><span class="tag main">Mainstream</span> <a href="https://k24.digital/411/geoffrey-mosiria-addresses-genesis-of-his-beef-with-babu-owino">K24: Mosiria addresses genesis of beef with Babu (15 Mar 2025)</a></li>
+    <li><span class="tag main">Mainstream</span> <a href="https://k24.digital/entertainment/celebrity/tiktok-wont-help-you-obinna-warns-mosiria-after-sakaja-fires-him">K24: "TikTok won't help you": Obinna warns Mosiria (22 Oct 2026)</a></li>
+    <li><span class="tag main">Mainstream</span> <a href="https://k24.digital/entertainment/celebrity/pure-lie-mosiria-rubbishes-babu-owinos-claim-his-party-registered-660k-members-in-6-days">K24: "Pure lie": Mosiria on Babu's 660k party members claim</a></li>
+    <li><span class="tag main">Mainstream</span> <a href="https://www.tnx.africa/newsbeat/article/2001560638/babu-owino-dismisses-mosirias-sh20-million-claim-after-sakaja-fires-aide">TNX Africa (Standard Group): Babu dismisses Mosiria's Sh20M claim; "lunatic" quote</a></li>
+    <li><span class="tag main">Mainstream</span> <a href="https://peopledaily.digital/inside-politics/babu-owino-sakaja-is-like-bibles-third-servant-who-wasted-his-masters-wealth">People Daily: Babu: Sakaja is like the Bible's third servant</a></li>
+    <li><span class="tag main">Mainstream</span> <a href="https://nairobinews.co.ke/oga-obinna-demands-sh10-million-from-geoffrey-mosiria-over-alleged-defamatory-claims/">Nairobi News: Obinna demands Sh10M from Mosiria</a></li>
+    <li><span class="tag main">Mainstream</span> <a href="https://www.kenyans.co.ke/news/92490-babu-owino-acquitted">Kenyans.co.ke: Babu Owino acquitted in DJ Evolve shooting (Aug 2023)</a></li>
+    <li><span class="tag main">Mainstream</span> <a href="https://nairobilawmonthly.com/why-court-acquitted-mp-babu-owino-acquitted-in-dj-evolve-shooting/">Nairobi Law Monthly: Why court acquitted Babu in DJ Evolve case</a></li>
+    <li><span class="tag ent">Digital</span> <a href="https://www.pulse.co.ke/story/geoffrey-mosiria-babu-owino-inside-long-running-beef-dating-back-to-university-of-nairobi-leadership-2026102302341525058">Pulse: Inside the long-running Mosiria–Babu beef (23 Oct 2026)</a></li>
+    <li><span class="tag ent">Digital</span> <a href="https://sauce.co.ke/2026/09/geoffrey-mosiria-hits-back-at-oga-obinna-with-ksh20-million-defamation-demand/">Sauce: Mosiria hits back with KSh20M demand</a></li>
+    <li><span class="tag ent">Digital</span> <a href="https://www.mpasho.co.ke/entertainment/2026-09-27-why-oga-obinna-is-suing-geoffrey-mosiria-for-ksh-10m-the-origin-of-their-feud">Mpasho: Why Obinna is suing Mosiria: origin of the feud</a></li>
+    <li><span class="tag ent">Digital</span> <a href="https://www.mpasho.co.ke/entertainment/2026-02-10-obinna-accuses-mosiria-of-misusing-mbavu-destroyer-trend">Mpasho: Obinna accuses Mosiria of misusing Mbavu Destroyer trend (10 Feb 2026)</a></li>
+    <li><span class="tag ent">Digital</span> <a href="https://nairobiwire.com/2025/04/geoffrey-mosiria-proposes-reparations-for-jalango-over-kisii-witches-meeting-comments.html">Nairobi Wire: Mosiria proposes reparations for Jalang'o (Apr 2025)</a></li>
+    <li><span class="tag ent">Digital</span> <a href="https://nairobixclusive.com/geoffrey-mosiria-questions-why-people-keep-falling-out-with-obinna/">Nairobi Xclusive: Mosiria questions why people fall out with Obinna</a></li>
+    <li><span class="tag ent">Digital</span> <a href="https://www.bana.co.ke/2026/10/mosiria-claims-babu-owino-was-bought-off-by-sakaja-at-sh2-5b.html">Bana: Mosiria claims Babu was bought off at Sh2.5B</a></li>
+    <li><span class="tag ent">Digital</span> <a href="https://kenyacreators.com/IkoNini/shows/geoffrey-mosiria-nairobi-governor-2027">Iko Nini Podcast: Mosiria series episode list</a></li>
+  </ol>
+</div></section>
+
+<section id="gaps"><div class="wrap">
+  <h2>Gaps &amp; next steps</h2>
+  <ul class="gaps">
+    <li><b>Sakaja's side.</b> His office "declined to respond" to NTV. Try the governor's "Let's Talk" podcast (launched 3 Sep 2026) or a request to County Hall for comment.</li>
+    <li><b>Jalang'o in 2026.</b> We found nothing from him on Mosiria's firing or bid. His original July 2025 interview with Mwakideu should be pulled from his own channel; here we use a re-upload.</li>
+    <li><b>Is Obinna on Babu's side?</b> In his 21 Oct video Obinna seems to say "we" are going for that office with "Babu… 2027, August 11th." We found no other source for this. Treat it as a lead, not a finding.</li>
+    <li><b>Was there ever a friendship?</b> We found no evidence that Mosiria was ever close to Obinna or Babu. Babu and Mosiria knew each other as rivals at UoN. The only "friendship" on record is Mosiria's own story of stepping aside for Babu in 2017.</li>
+    <li><b>Budget figures.</b> The KSh1.2B to KSh100M health budget claim can be checked against Nairobi County budget estimates and Controller of Budget reports for FY2023/24 and FY2024/25.</li>
+    <li><b>Mpasho headline, 8 Oct 2026:</b> "Mosiria warns Babu Owino over Oburu death claims." We couldn't open it or find it elsewhere. Unconfirmed.</li>
+    <li><b>Rights.</b> These clips belong to their channels. Clearing them is needed before any broadcast or monetised release; embedding for research is not a licence.</li>
+  </ul>
+</div></section>
+</main>
+
+<footer><div class="wrap">Research compiled 24 Oct 2026 from public sources. Allegations are attributed to the person making them and are not findings of fact. Captions are machine-generated and should be checked against the video before quoting.</div></footer>
+
+<button class="theme-btn" id="themeBtn" type="button">Theme</button>
+
+<script>
+const T = {primary:'On-camera primary', main:'Mainstream media', ent:'Entertainment / digital', claim:'Allegation, unverified'};
+const tag = k => `<span class="tag ${k}">${T[k]}</span>`;
+const fmt = s => { const h=Math.floor(s/3600), m=Math.floor(s%3600/60), x=String(s%60).padStart(2,'0'); return h? `${h}:${String(m).padStart(2,'0')}:${x}` : `${m}:${x}`; };
+
+const ACTS = [
+ {id:'act1', n:'Act I', title:'Origins: campus rivals and a boss who praised him', sub:'Before the feuds, the record shows two things: an old University of Nairobi rivalry with Babu, and a governor who called Mosiria the hardest-working chief officer in Kenya.', scenes:[
+  {title:'The SONU grudge', date:'Aired 14 Mar 2025 · events c. 2010s', tags:['primary','claim'],
+   clip:{id:'2kTUZZegUjU', start:9, ch:'NTV Kenya', up:'14 Mar 2025', len:'2:37'},
+   quotes:[
+    {t:9, text:'"Babu believes that Mosiria will never defeat him, or Mosiria will not be anything beyond SONU… I vied against Babu in SONU, and because Babu is known to blackmail administration… he was rigged in by administration because he was an administration puppet, and that beef still stays there."'},
+    {t:36, text:'"The following year when he was also again defending that seat, Babu looked for me, we sat in some restaurant… he begged me… he told me he wants to vie Embakasi East MP… I said okay, let me vie for another seat."'},
+    {t:96, text:'"I want to tell my brother: serve your people, serve them diligently, do the work God gave you, and stop interfering with the work we are doing."'}],
+   ctx:'This is the earliest on-camera account of the rivalry, and it comes only from Mosiria. In it he says the two once made a political deal: he stepped aside so Babu could run in Embakasi East.',
+   srcs:[['main','K24: Mosiria addresses genesis of his beef with Babu (15 Mar 2025)','https://k24.digital/411/geoffrey-mosiria-addresses-genesis-of-his-beef-with-babu-owino'],['ent','Pulse: Inside the long-running beef','https://www.pulse.co.ke/story/geoffrey-mosiria-babu-owino-inside-long-running-beef-dating-back-to-university-of-nairobi-leadership-2026102302341525058']],
+   check:'"Rigged" is Mosiria\'s claim. We found no response from Babu on the SONU election.'},
+  {title:'"The most hardworking chief officer in Kenya"', date:'Uploaded 17 Jun 2024', tags:['primary'],
+   clip:{id:'SVxnAOHl47E', start:0, ch:'Dan Hescky', up:'17 Jun 2024', len:'1:38'},
+   quotes:[
+    {t:5, text:'"Sorry, Mosiria, he\'s not a doctor. This guy is one of the most hardworking chief officers in Kenya, not just Nairobi. I am extremely proud of Mosiria… he has gone out of his way more than any other chief officer in any other sector."', who:'Sakaja'},
+    {t:59, text:'"This guy is the one who made us do the first-ever ICU in Nairobi County without me having thought about it."', who:'Sakaja'}],
+   ctx:'Sakaja appointed Mosiria chief officer for Health Facilities in 2022. The clip went viral again the day he was fired (<a href="https://youtu.be/QbZdrj9r6Qg">Uzalendo News re-upload, 21 Oct 2026</a>). Use it to cut from praise to dismissal.',
+   srcs:[['main','The Star: The Mosiria phenomenon (career dates)','https://www.the-star.co.ke/news/2026-10-22-the-mosiria-phenomenon-how-social-media-built-his-profile']]},
+ ]},
+ {id:'act2', n:'Act II', title:'Cracks: transfers, TikTok and trading insults with Babu', sub:'Mosiria dates his fallout with Sakaja to December 2023. Meanwhile the old rivalry with Babu goes public, and Jalang\'o, Babu\'s ally, has his own brush with Mosiria.', scenes:[
+  {title:'"Babu\'s goons": the protests episode', date:'Jun 2025', tags:['primary','claim'],
+   clip:{id:'4ekxBlqBqXs', start:0, ch:'Iko Nini Podcast', up:'24 Jun 2025', len:'19:38'},
+   quotes:[],
+   ctx:'A week earlier, Babu had condemned "goons" who attacked protesters in the CBD and pinned it on City Hall (<a href="https://youtu.be/2elEGTUg0CM">Citizen TV, 17 Jun 2025</a>: <i>"These goons, these thugs are not heroes. They are criminals."</i>). Mosiria then went on Iko Nini and turned the accusation back on Babu. This episode is in Swahili; the auto-captions are in <a href="transcripts/4ekxBlqBqXs.txt">/transcripts</a>.',
+   srcs:[['primary','Citizen TV: Babu condemns Sakaja after goons attack protesters','https://youtu.be/2elEGTUg0CM']],
+   check:'This is one man\'s accusation against another, with no independent finding on who organised the attackers.'},
+  {title:'Babu\'s comeback: "A fly can disturb a lion"', date:'Jul 2025', tags:['primary'],
+   clip:{id:'_WKUQLkLZS8', start:0, ch:'DMS TV Kenya', up:'2 Jul 2025', len:'0:15'},
+   quotes:[{t:1, text:'Reporter: "Geoffrey Mosiria has been talking about you every day. What do you say?" Babu: "You know what? A fly can disturb a lion more than a lion can disturb a fly. So… gibberish."', who:'Babu Owino'}],
+   ctx:'A short clip that sums up how Babu responds: dismiss Mosiria, don\'t engage. A later jab, in Oct 2026: <i>"You know my brother, I respect women so much. I will not argue with…"</i> (<a href="https://youtu.be/mVNfjxe1HHc">Steve The G-Master, 10 Oct 2026</a>, translated from Swahili).'},
+  {title:'Jalang\'o, the "witches" and Babu\'s camp', date:'Apr–Jul 2025', tags:['primary','main'],
+   clip:{id:'eUm0S5PhrxI', start:52, ch:'Uzalendo News', up:'28 Apr 2025', len:'2:35'},
+   quotes:[{t:58, text:'"Kumbe ni baraza ya abarogi. Ni wachawi walikuwa wamekaa hapo ndani wanaongea…"', orig:'Translation: "It turned out to be a council of abarogi, witches sitting in there talking…" Jalang\'o was joking in Kitutu Chache North that the witches were upset because new streetlights had ruined their night work.', who:'Jalang\'o'}],
+   ctx:'Mosiria, who is Kisii, responded by demanding "reparations" of 1,000 cows and 2,000 goats (<a href="https://nairobiwire.com/2025/04/geoffrey-mosiria-proposes-reparations-for-jalango-over-kisii-witches-meeting-comments.html">Nairobi Wire</a>). That is the only direct clash between the two we found. Three months later Jalang\'o said <i>"Babu Owino akipewa hiyo ticket ya ODM… Babu atakuwa Governor"</i> ("If Babu Owino gets the ODM ticket… Babu will be governor"; <a href="https://citizen.digital/article/babu-owino-will-win-nairobi-governor-race-with-or-without-odm-ticket-jalango-says-n366620">Citizen</a>; <a href="https://youtu.be/CHy1BG_tvnU">clip re-upload, 18 Jul 2025</a>). The Babu–Jalang\'o friendship goes back further: <a href="https://youtu.be/RFPHd8hb5sI">Babu\'s own channel, Feb 2023: "Babu Owino rescues Jalang\'o from goons at Azimio MPs retreat"</a>.',
+   srcs:[['main','The Star: Babu will be Nairobi Governor in 2027 – Jalang\'o','https://www.the-star.co.ke/news/2025-07-18-babu-owino-will-be-nairobi-governor-in-2027-jalango'],['ent','Nairobi Wire: Mosiria proposes reparations for Jalang\'o','https://nairobiwire.com/2025/04/geoffrey-mosiria-proposes-reparations-for-jalango-over-kisii-witches-meeting-comments.html']]},
+  {title:'Escalation: "goons", a DJ and "state project"', date:'Aug–Sep 2026', tags:['primary','claim'],
+   clip:{id:'gzqPzlXAzRI', start:1827, ch:'SPM Buzz TV · Public Square', up:'21 Aug 2026', len:'1:07:39'},
+   quotes:[
+    {t:1861, text:'"When I was vying against Babu as the chairman SONU… Benar was my secretary general… Benar was beaten by Babu\'s goons and Babu himself."'},
+    {t:1900, text:'"We have a DJ who cannot function normally as a human being after he was shot… Because he was shot by our brother Babu."'}],
+   ctx:'A month later, on his own channel, Mosiria goes further and calls Babu a "government informer" at UoN and "a state project" (<a href="https://youtu.be/i_Vo6mKuMJ4?t=2211">Geoffrey Mosiria KE, 22 Sep 2026, @36:51</a>). The same month he called Babu\'s claim of 660k party members registered in 6 days a "pure lie" (<a href="https://k24.digital/entertainment/celebrity/pure-lie-mosiria-rubbishes-babu-owinos-claim-his-party-registered-660k-members-in-6-days">K24</a>).',
+   check:'<b>Required context:</b> in the DJ Evolve case (Jan 2020), the attempted-murder charge was withdrawn after a settlement in Dec 2021, and Babu was acquitted on the firearm count in Aug 2023 for lack of evidence (<a href="https://www.kenyans.co.ke/news/92490-babu-owino-acquitted">Kenyans.co.ke</a>). The "Benar" assault and "informer" claims are unverified.'},
+ ]},
+ {id:'act3', n:'Act III', title:'The Obinna front: a boxing match, then lawyers', sub:'This feud has nothing to do with City Hall. It starts as a fight over content and ends with rival defamation demands.', scenes:[
+  {title:'From "Mbavu Destroyer" to "scripted"', date:'Feb–Apr 2026', tags:['main','claim'],
+   clip:null,
+   quotes:[
+    {text:'"[Obinna] knew the winner even before the match started… The plan was to stage a rematch where Mbavu would win, then organise a final match."', who:'Mosiria, via The Star'},
+    {text:'"Sometimes before you speak, just stop and think. It\'s not illegal to think… Stop being a hater."', who:'Obinna, via The Star'}],
+   ctx:'10 Feb 2026: Obinna accuses Mosiria of "misusing the Mbavu Destroyer trend" (<a href="https://www.mpasho.co.ke/entertainment/2026-02-10-obinna-accuses-mosiria-of-misusing-mbavu-destroyer-trend">Mpasho</a>). On 5 Apr Majembe knocks out Mbavu Destroyer at Vurugu Fight Night, and Mosiria says the bout was rigged (<a href="https://www.the-star.co.ke/news/2026-04-06-obinna-mosiria-clash-over-alleged-scripted-boxing-match-claims">The Star, 6 Apr 2026</a>). We found no verified primary clip of this exchange; the many re-uploads come from aggregator channels.',
+   check:'The Star: "no independent confirmation that the match was scripted."'},
+  {title:'"The only Obinna I know is from Nigeria"', date:'Sep–Oct 2026', tags:['primary','main'],
+   clip:{id:'X-319FbhWqQ', start:3, ch:'Over 1M Podcast', up:'2 Oct 2026', len:'48:12'},
+   quotes:[
+    {t:3, text:'"Personally, I don\'t know who is Oga Obinna. The only Obinna I know… the one I rescued from the streets of Nairobi, is from Nigeria."'},
+    {t:158, text:'"I think you are talking of a different person in that letter… I don\'t know the person by that name."'}],
+   ctx:'Obinna\'s lawyers sent a demand letter, reported as dated 17 Sep 2026, seeking KSh10M, an apology and removal of posts (<a href="https://nairobinews.co.ke/oga-obinna-demands-sh10-million-from-geoffrey-mosiria-over-alleged-defamatory-claims/">Nairobi News</a>). Mosiria answered with a KSh20M counter-demand dated 28 Sep (<a href="https://sauce.co.ke/2026/09/geoffrey-mosiria-hits-back-at-oga-obinna-with-ksh20-million-defamation-demand/">Sauce</a>). His defence is that Obinna\'s legal name is Steve Thompson Magana, so "Obinna" in the letter must be a different man. He repeated the line on <a href="https://youtu.be/51oqihFSC0E?t=2342">The Volcano, @39:02</a>.',
+   check:'Demand letters only. We found no court filing.'},
+ ]},
+ {id:'act4', n:'Act IV', title:'The declaration and the firing', sub:'Ten days in October 2026: Mosiria declares, goes on podcasts and accuses his boss, and is removed.', scenes:[
+  {title:'"Mama should be my deputy"', date:'11 Oct 2026', tags:['primary'],
+   clip:{id:'uIc1Y5B2R84', start:220, ch:'Kenya News Today', up:'12 Oct 2026', len:'6:06'},
+   quotes:[{t:231, text:'"…nikiwa gavana, mama akuwe deputy wangu…"', orig:'Translation: "…when I am governor, Mama [Bishop Margaret Wanjiru] should be my deputy…"'}],
+   ctx:'He declared at Bishop Margaret Wanjiru\'s church in Nairobi, calling himself "Mr Fix-it" (<a href="https://capitalfm.africa/sakaja-sacks-mosiria-days-after-governor-bid/">Capital FM</a>). KTN reports he also sought Mike Sonko\'s blessing (<a href="https://youtu.be/5IJVpqolkFY?t=242">KTN @4:02</a>).'},
+  {title:'The podcast that preceded the sacking', date:'20–21 Oct 2026', tags:['primary','claim'],
+   clip:{id:'62DVyFxwS4E', start:3206, ch:'Iko Nini Podcast · Ep. 764', up:'21 Oct 2026', len:'2:10:17'},
+   quotes:[
+    {t:3206, text:'"My boss and Babu are working together… and I\'m their common enemy."'},
+    {t:3263, text:'"They called Babu and they sat down and told him, what do you want? Babu asked for 20 million… he asked for 50 million, was given 20."'},
+    {t:3275, text:'"…a retainer, we call it a retainer, weekly, of 1 million, so that he keeps quiet."'},
+    {t:3353, text:'Host: "So according to what you\'re telling us, Babu might get paid 2.5 billion?" Mosiria: "Yeah. To step down."'},
+    {t:885, text:'On his budget: cut "from 1.2 billion to 100 million… just to make sure that Mosiria cannot do anything at the headquarters."'}],
+   ctx:'This episode explains why outlets report different figures. Mosiria makes <b>both</b> claims: KSh20M already paid plus a weekly retainer, and KSh2.5B under negotiation. He told The Volcano something similar a day earlier: <i>"The moment he was put on payroll, he kept quiet"</i> (<a href="https://youtu.be/51oqihFSC0E?t=2292">@38:12</a>). Iko Nini\'s follow-up, released the next day: "<a href="https://youtu.be/iuXGinTiqJY">Mosiria FIRED hours after our interview</a>."',
+   srcs:[['primary','The Volcano Ke: "Gov. Sakaja is threatened by me" (20 Oct 2026)','https://youtu.be/51oqihFSC0E?t=653'],['ent','Bana: the Sh2.5B claim','https://www.bana.co.ke/2026/10/mosiria-claims-babu-owino-was-bought-off-by-sakaja-at-sh2-5b.html']],
+   check:'These are allegations with no evidence offered on air. Babu denies them (Act V).'},
+  {title:'The memo', date:'21 Oct 2026', tags:['primary','main'],
+   clip:{id:'5IJVpqolkFY', start:19, ch:'KTN News Kenya', up:'21 Oct 2026', len:'4:16'},
+   quotes:[
+    {t:125, text:'"The problem with my boss is that he doesn\'t want to be advised… when we try to advise him, we become his enemies."'},
+    {t:202, text:'"My boss has no control of City Hall. The people running City Hall are the people around my boss, led by the chief of staff."'},
+    {t:230, text:'"My boss has never picked my call unless he has an issue."'}],
+   ctx:'County Secretary Machel Waikenda named Zipporah Njeri Mwangi acting chief officer, and the memo gives no reason. NTV\'s version: <i>"I think my only mistake was to outshine my master… I\'m sorry and I apologise to my boss"</i> (<a href="https://youtu.be/3wdLiiLADAU?t=83">NTV @1:23</a>).',
+   srcs:[['primary','NTV Kenya: Geoffrey Mosiria removed from Nairobi County docket','https://youtu.be/3wdLiiLADAU'],['main','Citizen Digital: Mosiria fires back','https://citizen.digital/article/budget-cuts-internal-frustrations-mosiria-fires-back-at-sakaja-after-sacking-n392462']],
+   check:'NTV (@2:49): "NTV has not independently verified the allegations. The governor, through his communications team, declined to respond."'},
+ ]},
+ {id:'act5', n:'Act V', title:'Aftermath: everyone weighs in', sub:'In the 72 hours after the firing, Babu, Obinna and the mainstream press all react. Jalang\'o is silent on record.', scenes:[
+  {title:'Babu: "He is a lunatic"', date:'21–22 Oct 2026', tags:['main','primary'],
+   clip:{id:'W5-_Gva2TVk', start:51, ch:'Kenya News Channel', up:'22 Oct 2026', len:'3:12'},
+   quotes:[{text:'"He is a lunatic. A direct product of a mental institution."', who:'Babu Owino to TNX Africa'}],
+   ctx:'Babu denied the bribe claim (<a href="https://www.tnx.africa/newsbeat/article/2001560638/babu-owino-dismisses-mosirias-sh20-million-claim-after-sakaja-fires-aide">TNX</a>). The same week he dismissed reports that Gachagua wanted him to switch to the Senate race. That denial is what this clip covers (<a href="https://www.the-star.co.ke/news/2026-10-22-babu-dismisses-reports-of-senate-switch">The Star</a>). Against Mosiria\'s claim that Babu "went silent": in <a href="https://youtu.be/sB5mNQ8LmMo">March 2026 (The Star)</a> Babu said Sakaja\'s funds were <i>"defrauded, stolen by him and his officers,"</i> and in October he compared Sakaja to the Bible\'s "third servant" (<a href="https://peopledaily.digital/inside-politics/babu-owino-sakaja-is-like-bibles-third-servant-who-wasted-his-masters-wealth">People Daily</a>).'},
+  {title:'Obinna: "Shut up… TikTok hautasaidika"', date:'21 Oct 2026', tags:['primary'],
+   clip:{id:'nXlGZc8gm0M', start:174, ch:'Obinna TV Updates (ownership not verified)', up:'21 Oct 2026', len:'5:58'},
+   quotes:[
+    {t:65, text:'"…he has a loose mouth. He talks too much, and when you talk too much in any organisation you\'re a liability."'},
+    {t:174, text:'"I know it\'s not my place to tell him this, because I\'m among the people he stepped on a lot. But I\'ll just put it out here… Bro, shut up."', orig:'Original mixes English and Swahili: "…because I\'m among the people that alikuwa amekanyaga sana."'},
+    {t:206, text:'"If it\'s something that you can go through legally, go through it legally. But here on TikTok you won\'t get help."', orig:'"…But haba TikTok hautasaidika bro."'},
+    {t:228, text:'"…the more you talk, the more you help us campaign… Babu is getting in there early, 2027, we\'re there August 11th."', orig:'Auto-captions unclear here: "…unatusaidia pia kukampain… Eh Babu anaingia hapo mapema 2027 tuko hapo August 11th." Treat as a lead.'}],
+   ctx:'Obinna also mocks Mosiria\'s "Nigerian Obinna" line ("his friend Obinna Ekene, or whatever that name is"). K24 wrote up the same video (<a href="https://k24.digital/entertainment/celebrity/tiktok-wont-help-you-obinna-warns-mosiria-after-sakaja-fires-him">K24</a>).',
+   check:'Whether Obinna is backing Babu rests only on a garbled caption line. Confirm against the audio before using it.'},
+  {title:'Mosiria\'s long interview: "I outshone my boss, so I was fired"', date:'23 Oct 2026', tags:['primary'],
+   clip:{id:'BxjhH7lLMqY', start:129, ch:'NTV Kenya', up:'23 Oct 2026', len:'25:51'},
+   quotes:[{t:129, text:'"…governor of Nairobi City County 2027, because the people of Nairobi said: Mosiria, you have worked, you push yourself, with a small office. If we give you a big office…"', orig:'"…gavana Nairobi City County 2027 kwa sababu wananchi wa Nairobi walisema Mosiria umefanya kazi unajituma na ofisi ndogo… tukikupatia ofisi kubwa…"'}],
+   ctx:'His longest mainstream sit-down after the firing, in Swahili. The title, "Niling\'ara kuliko boss wangu, nikafutwa", translates as "I shone brighter than my boss, so I was fired." Full auto-captions in <a href="transcripts/BxjhH7lLMqY.txt">/transcripts</a>. A useful closing scene: he is now outside City Hall and running against both his former boss and his campus rival.'},
+ ]},
+];
+
+const TL = [
+ ['c. 2010s','Mosiria and Babu face off in SONU student politics at the University of Nairobi (Mosiria\'s account).'],
+ ['2017','Babu wins Embakasi East. Mosiria says he stepped aside at Babu\'s request.'],
+ ['2022','Sakaja appoints Mosiria chief officer for Health Facilities.'],
+ ['23/28 Dec 2023','Per Mosiria, his accounting-officer powers are withdrawn: the start of the fallout.'],
+ ['17 Jun 2024','Video of Sakaja calling Mosiria "one of the most hardworking chief officers in Kenya" is uploaded.'],
+ ['2024','Mosiria moved to Environment.'],
+ ['14 Mar 2025','On NTV, Mosiria says Babu was "rigged in" at SONU.'],
+ ['Apr 2025','Jalang\'o\'s Kisii "witches" joke; Mosiria demands "reparations".'],
+ ['17–24 Jun 2025','Babu blames City Hall for "goons" in the CBD; Mosiria answers on Iko Nini.'],
+ ['2 Jul 2025','Babu: "A fly can disturb a lion…"'],
+ ['18–19 Jul 2025','Jalang\'o: Babu "will be governor".'],
+ ['Nov 2025','Mosiria moved to Public Participation, Citizen Engagement and Customer Service.'],
+ ['10 Feb 2026','Obinna accuses Mosiria of misusing the Mbavu Destroyer trend.'],
+ ['10 Mar 2026','Babu accuses Sakaja of misappropriating funds (The Star).'],
+ ['5–6 Apr 2026','Vurugu Fight Night. Mosiria calls the bout "scripted"; Obinna: "Stop being a hater."'],
+ ['21 Aug 2026','Mosiria on SPM Buzz: claims about SONU violence and the DJ Evolve shooting (Babu acquitted in 2023).'],
+ ['17 Sep 2026','Obinna\'s KSh10M demand letter (reported date).'],
+ ['22 Sep 2026','Mosiria calls Babu a "state project" on his own channel; disputes Babu\'s 660k-members claim.'],
+ ['28 Sep 2026','Mosiria\'s KSh20M counter-demand (reported date).'],
+ ['2 Oct 2026','Over 1M Podcast: "The only Obinna I know is from Nigeria."'],
+ ['10 Oct 2026','Babu: "I respect women so much. I will not argue with…"'],
+ ['11 Oct 2026','Mosiria declares for governor at Bishop Wanjiru\'s church, "Mr Fix-it".'],
+ ['20 Oct 2026','The Volcano: "Sakaja is threatened by me"; claims Babu was "put on payroll".'],
+ ['21 Oct 2026','Iko Nini Ep. 764: KSh20M and KSh2.5B claims. Hours later, the county memo removes Mosiria.'],
+ ['21–22 Oct 2026','Babu: "He is a lunatic." Obinna: "Shut up… TikTok hautasaidika." Babu denies Senate-switch reports.'],
+ ['23 Oct 2026','NTV long interview: "Niling\'ara kuliko boss wangu, nikafutwa."'],
+];
+
+function render(){
+  const root = document.getElementById('acts');
+  const vids = new Map();
+  root.innerHTML = ACTS.map(a => `
+   <section id="${a.id}"><div class="wrap">
+    <div class="act-head"><span class="act-num">${a.n.toUpperCase()}</span><h2>${a.title}</h2></div>
+    <p class="sub">${a.sub}</p>
+    ${a.scenes.map((s,i) => {
+      if (s.clip) vids.set(s.clip.id, s.clip);
+      const vidHtml = s.clip ? `
+        <div class="vid" data-id="${s.clip.id}" data-start="${s.clip.start}" role="button" tabindex="0" aria-label="Play ${s.title}">
+          <img loading="lazy" src="https://i.ytimg.com/vi/${s.clip.id}/hqdefault.jpg" alt="">
+          <div class="play"><span>▶ Play from ${fmt(s.clip.start)}</span></div>
+        </div>
+        <div class="vmeta"><a href="https://youtu.be/${s.clip.id}?t=${s.clip.start}" target="_blank" rel="noopener">${s.clip.ch}</a> · uploaded ${s.clip.up} · ${s.clip.len} · <a href="transcripts/${s.clip.id}.txt">captions</a></div>`
+        : `<div class="note" style="margin:0">No verified primary clip for this scene. It relies on the print reports cited.</div>`;
+      const q = s.quotes.map(x => `
+        <div class="quote">
+          ${x.t!=null && s.clip ? `<button class="ts" data-seek="${x.t}" data-vid="${s.clip.id}">${fmt(x.t)}</button>` : ''}
+          ${x.who ? `<span class="ts" style="background:transparent;padding-left:0;color:var(--muted)">${x.who}</span>` : ''}
+          <p>${x.text}</p>${x.orig ? `<div class="orig">${x.orig}</div>` : ''}
+        </div>`).join('');
+      const srcs = (s.srcs||[]).map(([k,l,u]) => `<li>${tag(k)} <a href="${u}" target="_blank" rel="noopener">${l}</a></li>`).join('');
+      return `<article class="scene" id="${a.id}-s${i+1}">
+        <div class="scene-top"><div><div class="date">Scene ${i+1} · ${s.date}</div><h3>${s.title}</h3></div><div style="display:flex;gap:6px;flex-wrap:wrap">${s.tags.map(tag).join('')}</div></div>
+        <div class="scene-grid"><div>${vidHtml}</div><div>${q}<p class="ctx">${s.ctx}</p>${srcs?`<ul class="srcs">${srcs}</ul>`:''}${s.check?`<div class="check"><b>Fact-check:</b> ${s.check}</div>`:''}</div></div>
+      </article>`;
+    }).join('')}
+   </div></section>`).join('');
+
+  // extra videos referenced inline
+  const extra = [
+    {id:'QbZdrj9r6Qg', ch:'Uzalendo News', up:'21 Oct 2026', t:'"Mosiria is the most hardworking chief officer in Kenya": the time Sakaja praised his former CO'},
+    {id:'2elEGTUg0CM', ch:'Citizen TV Kenya', up:'17 Jun 2025', t:'Babu Owino condemns Governor Sakaja after goons attack protesters'},
+    {id:'mVNfjxe1HHc', ch:'Steve The G-Master', up:'10 Oct 2026', t:'Babu Owino to Geoffrey Mosiria: "I respect women, I can\'t argue with her"'},
+    {id:'CHy1BG_tvnU', ch:'NASIDAH TV', up:'18 Jul 2025', t:'Lang\'ata MP Jalang\'o endorses Babu Owino for Nairobi governorship'},
+    {id:'RFPHd8hb5sI', ch:'BABU OWINO', up:'9 Feb 2023', t:'Babu Owino rescues Jalang\'o from goons at Azimio MPs retreat'},
+    {id:'i_Vo6mKuMJ4', ch:'Geoffrey Mosiria KE', up:'22 Sep 2026', t:'"Babu Owino is doomed…" (Mosiria\'s own channel)'},
+    {id:'51oqihFSC0E', ch:'The Volcano Kenya', up:'20 Oct 2026', t:'Geoffrey Mosiria: "Gov. Sakaja is threatened by me"'},
+    {id:'iuXGinTiqJY', ch:'Iko Nini Podcast', up:'22 Oct 2026 (EAT)', t:'Mosiria FIRED hours after our interview'},
+    {id:'3wdLiiLADAU', ch:'NTV Kenya', up:'21 Oct 2026', t:'Geoffrey Mosiria removed from Nairobi County docket'},
+    {id:'sB5mNQ8LmMo', ch:'The Star Kenya', up:'10 Mar 2026', t:'Babu Owino accuses Sakaja of misusing funds'},
+  ];
+  const titles = {'2kTUZZegUjU':'Geoffrey Mosiria: I contested against Babu Owino in the UoN but he was rigged','SVxnAOHl47E':'"Geoffrey Mosiria is the most hardworking chief officer in Kenya": Sakaja','4ekxBlqBqXs':'BREAKING: Mosiria exposes Babu Owino\'s "goons" in Nairobi protests','_WKUQLkLZS8':'Babu Owino\'s response to Mosiria\'s attacks','eUm0S5PhrxI':'Jalang\'o narrates his encounter with witches in Kisii County','gzqPzlXAzRI':'Geoffrey Mosiria warns: "Goons will take over if Babu Owino becomes governor" | Public Square','X-319FbhWqQ':'"Oga Obinna Ekene is broke and depressed": Geoffrey Mosiria, Part 2','uIc1Y5B2R84':'Geoffrey Mosiria declares Nairobi governor bid, proposes Margaret Wanjiru as deputy','62DVyFxwS4E':'Mosiria exposes Sakaja & his office: cartels, "Shakahola" office & Babu Owino bribe | Iko Nini 764','5IJVpqolkFY':'Sakaja fires Mosiria days after he declares 2027 Nairobi governor bid','W5-_Gva2TVk':'Babu Owino breaks silence on claims Gachagua wants him to drop governor bid','nXlGZc8gm0M':'Oga Obinna warns Geoffrey Mosiria','BxjhH7lLMqY':'Niling\'ara kuliko boss wangu, nikafutwa: Geoffrey Mosiria'};
+  const mainstream = new Set(['NTV Kenya','KTN News Kenya','Citizen TV Kenya','The Star Kenya']);
+  const list = [...[...vids.values()].map(c => ({id:c.id, ch:c.ch, up:c.up, t:titles[c.id]||c.id})), ...extra.filter(e => !vids.has(e.id))];
+  document.getElementById('vidsrc').innerHTML = list.map(v => {
+    const k = mainstream.has(v.ch) ? 'main' : (/Iko Nini|Over 1M|Volcano|SPM|Mosiria KE|BABU OWINO|Obinna/.test(v.ch) ? 'primary' : 'ent');
+    return `<li>${tag(k)} <a href="https://youtu.be/${v.id}" target="_blank" rel="noopener">${v.t}</a> · ${v.ch}, ${v.up}${'' } · <a href="transcripts/${v.id}.txt">captions</a></li>`;
+  }).join('');
+
+  document.getElementById('tl').innerHTML = TL.map(([d,t]) => `<li><div class="d">${d}</div>${t}</li>`).join('');
+}
+
+function play(el, start){
+  const id = el.dataset.id;
+  el.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?start=${start}&autoplay=1&rel=0" title="YouTube video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+  el.style.cursor = 'default';
+}
+document.addEventListener('click', e => {
+  const v = e.target.closest('.vid');
+  if (v && !v.querySelector('iframe')) { play(v, +v.dataset.start); return; }
+  const b = e.target.closest('[data-seek]');
+  if (b) { const box = document.querySelector(`.vid[data-id="${b.dataset.vid}"]`); if (box) { play(box, +b.dataset.seek); box.scrollIntoView({behavior:'smooth', block:'center'}); } }
+});
+document.addEventListener('keydown', e => { const v = e.target.closest && e.target.closest('.vid'); if (v && (e.key==='Enter'||e.key===' ') && !v.querySelector('iframe')) { e.preventDefault(); play(v, +v.dataset.start); } });
+
+const btn = document.getElementById('themeBtn');
+const applyTheme = t => { if (t) document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme; };
+try { applyTheme(localStorage.getItem('theme')); } catch(_) {}
+btn.addEventListener('click', () => {
+  const dark = document.documentElement.dataset.theme ? document.documentElement.dataset.theme==='dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  const next = dark ? 'light' : 'dark'; applyTheme(next); try { localStorage.setItem('theme', next); } catch(_) {}
+});
+render();
+</script>
+</body>
+</html>
